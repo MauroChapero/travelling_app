@@ -1,5 +1,6 @@
 package com.api.ets.travelling_app.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -14,14 +15,13 @@ public class PlayerModel {
     private Long id;
 
     private String name;
-    private Long truckersMPId;
 
-    public PlayerModel() {
-    }
+    @Column(name = "euro_username")
+    private String euroUsername;
 
-    public PlayerModel(String name, Long truckersMPId) {
+    public PlayerModel(String name, String euroUsername) {
         this.name = name;
-        this.truckersMPId = truckersMPId;
+        this.euroUsername = euroUsername;
     }
 
     public Long getId() {
@@ -40,12 +40,12 @@ public class PlayerModel {
         this.name = name;
     }
 
-    public Long getTruckersMPId() {
-        return truckersMPId;
+    public String getEuroUsername() {
+        return euroUsername;
     }
 
-    public void setTruckersMPId(Long truckersMPId) {
-        this.truckersMPId = truckersMPId;
+    public void setEuroUsername(String euroUsername) {
+        this.euroUsername = euroUsername;
     }
 
 }
