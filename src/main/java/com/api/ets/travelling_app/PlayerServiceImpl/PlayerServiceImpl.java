@@ -42,7 +42,6 @@ public class PlayerServiceImpl implements IPlayerService {
             PlayerModel existingPlayer = optionalPlayer.get();
 
             existingPlayer.setName(playerRequest.getName());
-            existingPlayer.setTruckersMPId(playerRequest.getTruckersMPId());
 
             return Optional.of(playerRepository.save(existingPlayer));
         }
