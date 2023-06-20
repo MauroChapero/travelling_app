@@ -49,14 +49,14 @@ public class PlayerController {
     }
 
     @DeleteMapping("/{id}")
-public ResponseEntity<String> deletePlayer(@PathVariable("id") Long id) {
-    boolean deleted = playerService.deletePlayer(id);
+    public ResponseEntity<String> deletePlayer(@PathVariable("id") Long id) {
+        boolean deleted = playerService.deletePlayer(id);
 
-    if (!deleted) {
-        return ResponseEntity.notFound().build();
+        if (!deleted) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok("Player has been deleted successfully");
     }
-
-    return ResponseEntity.ok("Player has been deleted successfully");
-}
 
 }

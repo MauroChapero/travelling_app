@@ -14,14 +14,9 @@ public class PlayerModel {
     private Long id;
 
     private String name;
-    private Long truckersMPId;
 
-    public PlayerModel() {
-    }
-
-    public PlayerModel(String name, Long truckersMPId) {
+    public PlayerModel(String name) {
         this.name = name;
-        this.truckersMPId = truckersMPId;
     }
 
     public Long getId() {
@@ -39,13 +34,4 @@ public class PlayerModel {
     public void setName(String name) {
         this.name = name;
     }
-
-    public Long getTruckersMPId() {
-        return truckersMPId;
-    }
-
-    public void setTruckersMPId(Long truckersMPId) {
-        this.truckersMPId = truckersMPId;
-    }
-
 }
